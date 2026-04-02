@@ -12,3 +12,6 @@ Tasks
 - Organize into categories
 - Ask users what to focus on to get the data
 
+Jericho's feedback: This is a good start to the package idea, but the scope will need to be narrowed down to either a specific set of countries, economic indicators, and/or analyses. I would first center the package around some dataset and further carve out specific tasks you'd like to do from there. For instance, you might limit the user to looking at scatter plots and maps. 
+
+I would start with finding a dataset to model off of. Down the line, you may consider creating a function that takes in data of that specific nature, with your functions performing some sort of task on that dataset. Nevertheless, you'll need to narrow down the scope just a bit, but otherwise, you are all good to go!
