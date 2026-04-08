@@ -4,6 +4,8 @@ country_GDP_per_pop_timed <- function(data,country){
     select(Country, Year, Population, `Gross Domestic Product (GDP)`) |>
     mutate(GDP_per_pop = `Gross Domestic Product (GDP)`/Population)
   print(lm(Year~Population, data = data))
-  ggplot(data = data, mapping = aes(x = Year, y = Population)) + geom_point() +
-    geom_smooth(method = "lm")
+  ggplot(data = data, mapping = aes(x = Year, y = Population)) +
+    geom_point() +
+    geom_smooth(method = "lm") +
+    labs(title = paste("Plot of the line for", country))
 }
