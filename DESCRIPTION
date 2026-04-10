@@ -9,11 +9,13 @@ Authors@R: c(
       role = c("aut", "ctb", "cre")
     )
   )
-Description: The package uses economicIndicators dataset in order to discover different the economic 
-indicators in each country in the years 1970-2021. This allows users to gain some insights about 
-the country's important indicators such as the gdp per population and the AMA Exchange Rate.
+Description: The package uses economicIndicators dataset in order to discover different the economic indicators in each country in the years 1970-2021. This allows users to gain some insights about the country's important indicators such as the gdp per population and the AMA Exchange Rate.
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/llevensailor/economicIndicators
 BugReports: https://github.com/llevensailor/economicIndicators/issues
+RoxygenNote: 7.3.3
+Imports:
+  dplyr
+  fpp3
