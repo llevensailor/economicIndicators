@@ -6,8 +6,8 @@ country_GDP_per_pop_timed <- function(data,country){
     mutate(GDP_per_pop = `Gross Domestic Product (GDP)`/Population,Year_dif = Year-1970)
 
   df <- ts(data$GDP_per_pop, frequency = 1, start = 1970)
-  plot(df, main = paste(country, "'s GDP per Population over Time"),ylab = "Population")
+  plot(df, main = paste(country, "'s GDP per Population over Time"),ylab = "GDP Per Population")
 
-  print(lm(Population~Year_dif, data = data))
-
+  print(lm(GDP_per_pop~Year_dif, data = data))
+  summary(lm(GDP_per_pop~Year_dif, data = data))
 }
