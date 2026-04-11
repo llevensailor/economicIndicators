@@ -1,3 +1,15 @@
+#'Population country Comparison in one year
+#'@description Compares a country's population in a specific year.
+#'
+#'@name pop_country_compare_1year
+#'@details Takes in the data and has to check the range of the year before selecting the data and providing
+#'the population in both countries.
+#'@param data the economicIndicators data set
+#'@param country1 the first country for comparison
+#'@param country2 the second country for comparison
+#'@param year the year set for comparison of the countries
+#'@import dplyr
+#'@examples pop_country_compare_1year(economicIndicators_data,'Spain', 'Italy', 1970)
 library(dplyr)
 pop_country_compare_1year <- function(data,country1,country2,year){
   if(year<1970 || year>2021){

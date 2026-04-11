@@ -1,3 +1,14 @@
+#'Population country Comparison
+#'@description Compares a country's population in a specific year.
+#'
+#'@name gdp_per_pop1yr
+#'@details Takes in the data and has to check the range of the year before selecting the data and providing
+#'the GDP per population in a country.
+#'@param data the economicIndicators data set
+#'@param country the country for the specific GDP per population
+#'@param year the specific year for the country
+#'@import dplyr
+#'@examples gdp_per_pop1yr(economicIndicators_data,'Spain', 1970)
 library(dplyr)
 gdp_per_pop1yr <- function(data,country,year){
   if(year<1970 || year>2021){
@@ -6,6 +17,6 @@ gdp_per_pop1yr <- function(data,country,year){
   data <- data |>
     dplyr::filter(Country == country, Year == year) |>
     select(Country, Year, Population, `Gross Domestic Product (GDP)`) |>
-    mutate(GDP_per_pop = `Gross Domestic Product (GDP)`/Population)
+    dplyr::mutate(GDP_per_pop = `Gross Domestic Product (GDP)`/Population)
     return(data$GDP_per_pop)
 }
