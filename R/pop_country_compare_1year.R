@@ -16,7 +16,7 @@ pop_country_compare_1year <- function(data,country1,country2,year){
     stop("Please type in a year that is within the range of 1970 and 2021")
   }
   if(!is.character(country1) || !is.character(country2)){
-    error("Please put in a character type.")
+    stop("Please put in a character type.")
   }
   data2 <- data
   data <- data |>
@@ -26,6 +26,5 @@ pop_country_compare_1year <- function(data,country1,country2,year){
     dplyr::filter(Country == country2, Year == year) |>
     select(Country, Year, Population)
 
-  print(paste("The population for", country1, "in",year,"was", data$Population))
-  print(paste("The population for", country2, "in",year,"was", data2$Population))
+  print(paste("The population for", country1, "in",year,"was", data$Population, "while the population for", country2, "in",year,"was", data2$Population))
 }
