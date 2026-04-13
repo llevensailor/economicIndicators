@@ -9,6 +9,7 @@
 #'@param year the year set for the country
 #'@import dplyr
 #'@examples ag_hunt_nature(economicIndicators_data,'Spain', 1970)
+
 ag_hunt_nature<- function(data,country,year) {
   if(!is.character(country)){
     stop("Please put in a character type.")
@@ -19,5 +20,5 @@ ag_hunt_nature<- function(data,country,year) {
   data <- data |>
     dplyr::filter(Country == country, Year == year) |>
     select(Country, Year, `Agriculture, hunting, forestry, fishing (ISIC A-B)`)
-  print(data$`Agriculture, hunting, forestry, fishing (ISIC A-B)`)
+  return(data$`Agriculture, hunting, forestry, fishing (ISIC A-B)`)
 }

@@ -26,5 +26,5 @@ pop_country_compare_1year <- function(data,country1,country2,year){
     dplyr::filter(Country == country2, Year == year) |>
     select(Country, Year, Population)
 
-  print(paste("The population for", country1, "in",year,"was", data$Population, "while the population for", country2, "in",year,"was", data2$Population))
+  return(paste("The population for", country1, "in",year,"was", data$Population, "while the population for", country2, "in",year,"was", data2$Population))
 }
