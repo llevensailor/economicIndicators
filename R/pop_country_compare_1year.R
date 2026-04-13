@@ -15,6 +15,9 @@ pop_country_compare_1year <- function(data,country1,country2,year){
   if(year<1970 || year>2021){
     stop("Please type in a year that is within the range of 1970 and 2021")
   }
+  if(!is.character(country1) || !is.character(country2)){
+    error("Please put in a character type.")
+  }
   data2 <- data
   data <- data |>
     dplyr::filter(Country == country1, Year == year) |>

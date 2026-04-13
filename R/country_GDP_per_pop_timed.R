@@ -12,6 +12,9 @@
 #'@examples country_GDP_per_pop_timed(economicIndicators_data,'Spain')
 library(fpp3)
 country_GDP_per_pop_timed <- function(data,country){
+  if(!is.character(country)){
+    error("Please put in a character type.")
+  }
   data <- data |>
     dplyr::filter(Country == country) |>
     select(Country, Year, Population, `Gross Domestic Product (GDP)`) |>

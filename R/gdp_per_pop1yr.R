@@ -11,6 +11,9 @@
 #'@examples gdp_per_pop1yr(economicIndicators_data,'Spain', 1970)
 library(dplyr)
 gdp_per_pop1yr <- function(data,country,year){
+  if(!is.character(country)){
+    error("Please put in a character type.")
+  }
   if(year<1970 || year>2021){
     stop("Please type in a year that is within the range of 1970 and 2021")
   }
