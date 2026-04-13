@@ -13,7 +13,7 @@
 library(fpp3)
 country_GDP_per_pop_timed <- function(data,country){
   if(!is.character(country)){
-    error("Please put in a character type.")
+    stop("Please put in a character type.")
   }
   data <- data |>
     dplyr::filter(Country == country) |>
