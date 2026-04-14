@@ -3,12 +3,6 @@
 \name{highest_gdp_per_year}
 \alias{highest_gdp_per_year}
 \title{Highest GDP value based on the Given year}
-<<<<<<< HEAD
-\usage{
-highest_gdp_per_year(data, year)
-}
-=======
->>>>>>> 1a5565eab545dadbb3f8e44baf45497d1eeebb7d
 \arguments{
 \item{data}{the economicIndicators data set}
 
