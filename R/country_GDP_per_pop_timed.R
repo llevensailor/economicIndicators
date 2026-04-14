@@ -18,7 +18,7 @@ country_GDP_per_pop_timed <- function(data,country){
     stop("Please put in a character type.")
   }
   data <- data |>
-    stats::filter(Country == country) |>
+    dplyr::filter(Country == country) |>
     dplyr::select(Country, Year, Population, `Gross Domestic Product (GDP)`) |>
     dplyr::mutate(GDP_per_pop = `Gross Domestic Product (GDP)`/Population,Year_dif = Year-1970)
 

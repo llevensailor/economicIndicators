@@ -20,7 +20,7 @@ ag_hunt_nature<- function(data,country,year) {
     stop("Please type in a year that is within the range of 1970 and 2021")
   }
   data <- data |>
-    stats::filter(Country == country, Year == year) |>
+    dplyr::filter(Country == country, Year == year) |>
     dplyr::select(Country, Year, `Agriculture, hunting, forestry, fishing (ISIC A-B)`)
   return(data$`Agriculture, hunting, forestry, fishing (ISIC A-B)`)
 }

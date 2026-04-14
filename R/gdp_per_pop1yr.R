@@ -20,7 +20,7 @@ gdp_per_pop1yr <- function(data,country,year){
     stop("Please type in a year that is within the range of 1970 and 2021")
   }
   data <- data |>
-    stats::filter(Country == country, Year == year) |>
+    dplyr::filter(Country == country, Year == year) |>
     dplyr::select(Country, Year, Population, `Gross Domestic Product (GDP)`) |>
     dplyr::mutate(GDP_per_pop = `Gross Domestic Product (GDP)`/Population)
     return(data$GDP_per_pop)
