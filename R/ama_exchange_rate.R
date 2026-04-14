@@ -8,6 +8,7 @@
 #'@param country the country for the specific AMA exchange rate
 #'@param year the specific year for the country
 #'@import dplyr
+#'@importFrom rlang .data
 #'@export
 #'@examples ama_exchange_rate(economicIndicators_data,'Spain', 1970)
 library(dplyr)
@@ -18,8 +19,9 @@ ama_exchange_rate <- function(data,country,year){
   if(year<1970 || year>2021){
     stop("Please type in a year that is within the range of 1970 and 2021")
   }
-  data <- data |>
+  data <- .data |>
     dplyr::filter(Country == country, Year == year) |>
     select(Country, Year, `AMA exchange rate`)
   return(data$`AMA exchange rate`)
 }
+

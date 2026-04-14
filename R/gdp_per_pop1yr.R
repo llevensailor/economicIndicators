@@ -8,6 +8,7 @@
 #'@param country the country for the specific GDP per population
 #'@param year the specific year for the country
 #'@import dplyr
+#'@importFrom rlang .data
 #'@export
 #'@examples gdp_per_pop1yr(economicIndicators_data,'Spain', 1970)
 library(dplyr)
@@ -22,5 +23,5 @@ gdp_per_pop1yr <- function(data,country,year){
     dplyr::filter(Country == country, Year == year) |>
     select(Country, Year, Population, `Gross Domestic Product (GDP)`) |>
     dplyr::mutate(GDP_per_pop = `Gross Domestic Product (GDP)`/Population)
-    return(data$GDP_per_pop)
+    return(.data$GDP_per_pop)
 }
