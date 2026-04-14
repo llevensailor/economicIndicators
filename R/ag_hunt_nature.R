@@ -19,8 +19,9 @@ ag_hunt_nature<- function(data,country,year) {
   if(year< 1970 || year>2021){
     stop("Please type in a year that is within the range of 1970 and 2021")
   }
-  data <- .data |>
+  data <- data |>
     dplyr::filter(Country == country, Year == year) |>
     select(Country, Year, `Agriculture, hunting, forestry, fishing (ISIC A-B)`)
   return(data$`Agriculture, hunting, forestry, fishing (ISIC A-B)`)
 }
+

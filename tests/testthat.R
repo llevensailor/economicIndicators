@@ -10,3 +10,4 @@ library(testthat)
 library(economicIndicators)
 
 test_check("economicIndicators")
+
