@@ -9,6 +9,7 @@
 #'@param country the country for the specific GDP per population
 #'@import fpp3
 #'@import stats
+#'@export
 #'@examples country_GDP_per_pop_timed(economicIndicators_data,'Spain')
 library(fpp3)
 country_GDP_per_pop_timed <- function(data,country){

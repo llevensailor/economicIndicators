@@ -8,6 +8,7 @@
 #'@param country the country for the specific GDP per population
 #'@param year the specific year for the country
 #'@import dplyr
+#'@export
 #'@examples gdp_per_pop1yr(economicIndicators_data,'Spain', 1970)
 library(dplyr)
 gdp_per_pop1yr <- function(data,country,year){

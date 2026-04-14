@@ -8,6 +8,7 @@
 #'@param country the country for the specific AMA exchange rate
 #'@param year the specific year for the country
 #'@import dplyr
+#'@export
 #'@examples ama_exchange_rate(economicIndicators_data,'Spain', 1970)
 library(dplyr)
 ama_exchange_rate <- function(data,country,year){

@@ -9,6 +9,7 @@
 #'@param country2 the second country for comparison
 #'@param year the year set for comparison of the countries
 #'@import dplyr
+#'@export
 #'@examples pop_country_compare_1year(economicIndicators_data,'Spain', 'Italy', 1970)
 library(dplyr)
 pop_country_compare_1year <- function(data,country1,country2,year){

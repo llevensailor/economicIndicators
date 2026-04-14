@@ -8,6 +8,7 @@
 #'@param country the country to input
 #'@param year the year set for the country
 #'@import dplyr
+#'@export
 #'@examples ag_hunt_nature(economicIndicators_data,'Spain', 1970)
 
 ag_hunt_nature<- function(data,country,year) {
