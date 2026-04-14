@@ -20,8 +20,8 @@ ama_exchange_rate <- function(data,country,year){
     stop("Please type in a year that is within the range of 1970 and 2021")
   }
   data <- data |>
-    dplyr::filter(Country == country, Year == year) |>
-    select(Country, Year, `AMA exchange rate`)
+    stats::filter(Country == country, Year == year) |>
+    dplyr::select(Country, Year, `AMA exchange rate`)
   return(data$`AMA exchange rate`)
 }
 
