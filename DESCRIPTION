@@ -9,7 +9,9 @@ Authors@R: c(
       role = c("aut", "ctb", "cre")
     )
   )
-Description: The package uses economicIndicators dataset in order to discover different the economic indicators in each country in the years 1970-2021. This allows users to gain some insights about the country's important indicators such as the gdp per population and the AMA Exchange Rate.
+Description: The package uses economicIndicators dataset in order to discover different the economic
+indicators in each country in the years 1970-2021. This allows users to gain some insights 
+about the country's important indicators such as the gdp per population and the AMA Exchange Rate.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -24,4 +26,4 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Depends: 
-    R (>= 3.5)
+    R (>= 4.1.0)
