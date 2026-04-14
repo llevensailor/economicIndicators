@@ -9,9 +9,13 @@
 #'@param country the country for the specific GDP per population
 #'@import fpp3
 #'@import stats
+#'@export
 #'@examples country_GDP_per_pop_timed(economicIndicators_data,'Spain')
 library(fpp3)
 country_GDP_per_pop_timed <- function(data,country){
+  if(!is.character(country)){
+    stop("Please put in a character type.")
+  }
   data <- data |>
     dplyr::filter(Country == country) |>
     select(Country, Year, Population, `Gross Domestic Product (GDP)`) |>
@@ -20,6 +24,6 @@ country_GDP_per_pop_timed <- function(data,country){
   df <- ts(data$GDP_per_pop, frequency = 1, start = 1970)
   plot(df, main = paste(country, "'s GDP per Population over Time"),ylab = "GDP Per Population")
 
-  print(lm(GDP_per_pop~Year_dif, data = data))
+  return(lm(GDP_per_pop~Year_dif, data = data))
   summary(lm(GDP_per_pop~Year_dif, data = data))
 }
