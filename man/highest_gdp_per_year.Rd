@@ -17,3 +17,4 @@ Filters a year and then returns the top one using head(1)
 \examples{
 highest_gdp_per_year(economicIndicators_data, 1970)
 }
+\keyword{internal}

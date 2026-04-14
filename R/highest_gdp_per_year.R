@@ -8,6 +8,7 @@
 #'@import dplyr
 #'@export
 #'@examples highest_gdp_per_year(economicIndicators_data, 1970)
+#'@keywords internal
 library(dplyr)
 highest_gdp_per_year<- function(data,year) {
   data <- data |>
