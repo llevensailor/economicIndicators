@@ -6,7 +6,9 @@
 #'@param data the economicIndicators data set
 #'@param year the year set for the country
 #'@import dplyr
+#'@export
 #'@examples highest_gdp_per_year(economicIndicators_data, 1970)
+library(dplyr)
 highest_gdp_per_year<- function(data,year) {
   data <- data |>
     dplyr::filter(Year == year) |>
@@ -15,4 +17,5 @@ highest_gdp_per_year<- function(data,year) {
     head(1)
   print(data)
 }
+
 

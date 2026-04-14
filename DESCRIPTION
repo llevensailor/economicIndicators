@@ -18,7 +18,8 @@ BugReports: https://github.com/llevensailor/economicIndicators/issues
 RoxygenNote: 7.3.3
 Imports:
   dplyr,
-  fpp3
+  fpp3,
+  rlang
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3

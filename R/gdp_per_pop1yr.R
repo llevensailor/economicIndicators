@@ -23,5 +23,5 @@ gdp_per_pop1yr <- function(data,country,year){
     dplyr::filter(Country == country, Year == year) |>
     select(Country, Year, Population, `Gross Domestic Product (GDP)`) |>
     dplyr::mutate(GDP_per_pop = `Gross Domestic Product (GDP)`/Population)
-    return(.data$GDP_per_pop)
+    return(data$GDP_per_pop)
 }
