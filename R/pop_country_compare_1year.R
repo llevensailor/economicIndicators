@@ -8,7 +8,8 @@
 #'@param country1 the first country for comparison
 #'@param country2 the second country for comparison
 #'@param year the year set for comparison of the countries
-#'@import dplyr
+#'@importFrom dplyr filter select mutate
+#'@importFrom rlang .data
 #'@export
 #'@examples pop_country_compare_1year(economicIndicators_data,'Spain', 'Italy', 1970)
 library(dplyr)

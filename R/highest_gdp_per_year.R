@@ -5,7 +5,8 @@
 #'@details Filters a year and then returns the top one using head(1)
 #'@param data the economicIndicators data set
 #'@param year the year set for the country
-#'@import dplyr
+#'@importFrom dplyr filter select mutate
+#'@importFrom rlang .data
 #'@export
 #'@examples highest_gdp_per_year(economicIndicators_data, 1970)
 #'@keywords internal

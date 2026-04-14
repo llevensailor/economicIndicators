@@ -7,7 +7,7 @@
 #'@param data the economicIndicators data set
 #'@param country the country for the specific AMA exchange rate
 #'@param year the specific year for the country
-#'@import dplyr
+#'@importFrom dplyr filter select
 #'@importFrom rlang .data
 #'@export
 #'@examples ama_exchange_rate(economicIndicators_data,'Spain', 1970)

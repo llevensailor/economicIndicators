@@ -8,7 +8,7 @@
 #'@param data economicIndicators dataset
 #'@param country the country for the specific GDP per population
 #'@import fpp3
-#'@import stats
+#'@importFrom dplyr filter select mutate
 #'@importFrom rlang .data
 #'@export
 #'@examples country_GDP_per_pop_timed(economicIndicators_data,'Spain')

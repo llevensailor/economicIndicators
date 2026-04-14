@@ -7,7 +7,7 @@
 #'@param data the economicIndicators data set
 #'@param country the country to input
 #'@param year the year set for the country
-#'@import dplyr
+#'@importFrom dplyr filter select
 #'@importFrom rlang .data
 #'@export
 #'@examples ag_hunt_nature(economicIndicators_data,'Spain', 1970)

@@ -7,7 +7,7 @@
 #'@param data the economicIndicators data set
 #'@param country the country for the specific GDP per population
 #'@param year the specific year for the country
-#'@import dplyr
+#'@importFrom dplyr filter select mutate
 #'@importFrom rlang .data
 #'@export
 #'@examples gdp_per_pop1yr(economicIndicators_data,'Spain', 1970)
