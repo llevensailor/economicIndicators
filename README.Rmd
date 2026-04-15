@@ -3,4 +3,6 @@ title: "README"
 output: html_document
 date: "2026-04-01"
 ---
-Our  package centers a dataset from kaggle called economicIndicators_data. It measures economic indicators such as population, the year, the country name, the Gross Domestic Product (GDP), and the AMA exchange rate. Our functions would mainly deal with providing information about a country and its factors such as GDP per population of a specific year, the highest GDP per year, and the country's GDP per population over time.
+Our  package centers a dataset from kaggle called Global Economy Indicators. It measures economic indicators such as population, the year, the country name, the Gross Domestic Product (GDP), and the AMA exchange rate spanning from 1970 until 2021. Our functions would mainly deal with providing information about a country and its factors such as GDP per population of a specific year, the highest GDP per year, and the country's GDP per population over time.
+
+The goal of the package is to allow users to learn about economic indicators of a country in a specific time such as finding the AMA exchange rate and the indicator for agriculture, hunting, forestry, fishing in a specific year and finding out what was the country's GDP per population over time. 
