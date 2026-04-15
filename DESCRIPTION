@@ -7,6 +7,11 @@ Authors@R: c(
       "Ada", "Li",
       email = "ajli@smith.edu",
       role = c("aut", "ctb", "cre")
+    ),
+    person(
+    "Leah", "Levensailor",
+      email = "llevensailor@smith.edu",
+      role = c("aut", "ctb")
     )
   )
 Description: The package uses economicIndicators dataset in order to discover different the economic indicators in each country in the years 1970-2021. This allows users to gain some insights about the country's important indicators such as the gdp per population and the AMA Exchange Rate.
