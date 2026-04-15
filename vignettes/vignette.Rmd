@@ -17,3 +17,22 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(economicIndicators)
 ```
+
+## Background
+This package provides an analysis of crucial indicators such as population, the AMA exchange rate, and GDP per population of a country.
+
+## Highest GDP Per Year
+It provides the highest gdp value based on the given year.
+### Example
+```{r}
+highest_gdp_per_year(economicIndicators_data, 1970)
+```
+The example shows that the United States had the highest Gross Domestic Product (GDP) in 1970 of about 1.07e+12.
+
+## AMA Exchange Rate
+The AMA exchange rate function provides the AMA exchange rate of a country in a certian year.
+Ex.
+```{r}
+ama_exchange_rate(economicIndicators_data,'Spain', 1970)
+```
+This shows that teh AMA Exchange Rate of spain in 1970 has a value of 0.4207085.
