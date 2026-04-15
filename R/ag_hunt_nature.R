@@ -7,7 +7,7 @@
 #'@param data the economicIndicators data set
 #'@param country the country to input
 #'@param year the year set for the country
-#'@import dplyr
+#'@importFrom dplyr filter select
 #'@importFrom rlang .data
 #'@export
 #'@examples ag_hunt_nature(economicIndicators_data,'Spain', 1970)
@@ -21,7 +21,7 @@ ag_hunt_nature<- function(data,country,year) {
   }
   data <- data |>
     dplyr::filter(Country == country, Year == year) |>
-    select(Country, Year, `Agriculture, hunting, forestry, fishing (ISIC A-B)`)
+    dplyr::select(Country, Year, `Agriculture, hunting, forestry, fishing (ISIC A-B)`)
   return(data$`Agriculture, hunting, forestry, fishing (ISIC A-B)`)
 }
 

@@ -8,7 +8,7 @@
 #'@param data economicIndicators dataset
 #'@param country the country for the specific GDP per population
 #'@import fpp3
-#'@import stats
+#'@importFrom dplyr filter select mutate
 #'@importFrom rlang .data
 #'@export
 #'@examples country_GDP_per_pop_timed(economicIndicators_data,'Spain')
@@ -19,8 +19,8 @@ country_GDP_per_pop_timed <- function(data,country){
   }
   data <- data |>
     dplyr::filter(Country == country) |>
-    select(Country, Year, Population, `Gross Domestic Product (GDP)`) |>
-    mutate(GDP_per_pop = `Gross Domestic Product (GDP)`/Population,Year_dif = Year-1970)
+    dplyr::select(Country, Year, Population, `Gross Domestic Product (GDP)`) |>
+    dplyr::mutate(GDP_per_pop = `Gross Domestic Product (GDP)`/Population,Year_dif = Year-1970)
 
   df <- ts(data$GDP_per_pop, frequency = 1, start = 1970)
   plot(df, main = paste(country, "'s GDP per Population over Time"),ylab = "GDP Per Population")
