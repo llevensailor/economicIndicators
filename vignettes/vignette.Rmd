@@ -45,3 +45,10 @@ ama_exchange_rate(economicIndicators_data,'Spain', 1970)
 ```
 
 This shows that tehe MA Exchange Rate of Spain in 1970 has a value of 0.4207085.
+
+## Country GDP Per Population over Time
+It provides what was a country's GDP per population over the span of 1970-2021.
+```{r}
+country_GDP_per_pop_timed(economicIndicators_data,'Spain')
+```
+This function provides the regression model of Spain's GDP per population from 1970-2021 and a time series graph of Spains' GDP per population over time.
