@@ -3,12 +3,4 @@ title: "README"
 output: html_document
 date: "2026-04-01"
 ---
-The plan is to use the economic indicators and show how it differs globally over time and across various countries. I would like this package to center around different economic indicators over different times so the package can provide overall information about economic indicators data in order to allow users to understand different associations of indicators in the economy.This will allow users to then learn about the difference of the indicators globally and how it can be used to find various trends over time. Users also don't have to think about the painful effort of trying to look for associated trends with more difficult equations to set up. 
-
-Tasks
-- Read in the economic data of global indicators
-- Allow users to determine what kind of visualizations
-- Compute simple equations to find differences/trends
-- Organize into categories
-- Ask users what to focus on to get the data
-
+Our  package centers a dataset from kaggle called economicIndicators_data. It measures economic indicators such as population, the year, the country name, the Gross Domestic Product (GDP), and the AMA exchange rate. Our functions would mainly deal with providing information about a country and its factors such as GDP per population of a specific year, the highest GDP per year, and the country's GDP per population over time.
