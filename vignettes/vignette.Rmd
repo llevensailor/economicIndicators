@@ -51,4 +51,31 @@ It provides what was a country's GDP per population over the span of 1970-2021.
 ```{r}
 country_GDP_per_pop_timed(economicIndicators_data,'Spain')
 ```
-This function provides the regression model of Spain's GDP per population from 1970-2021 and a time series graph of Spains' GDP per population over time.
+This function provides the regression model of Spain's GDP per population from 1970-2021 and a time series graph of Spain's GDP per population over time.
+
+## GDP per population in a specific year
+The function provides what was the GDP per population of a country set in a specific year.
+```{r}
+gdp_per_pop1yr(economicIndicators_data,'Spain', 1970)
+```
+This provides the GDP per population of Spain in 1970.
+
+## Population Comparison in a year
+The function provides the comparison of two different countries set in a specific year.
+
+Example:
+```{r}
+pop_country_compare_1year(economicIndicators_data,'Spain', 'Italy', 1970)
+```
+The example states what was the population of Spain and Italy were in 1970.
+
+## Agriculture and nature
+The function provides the indicator of agriculture, hunting, forestry, fishing production.
+
+Example:
+```{r}
+ag_hunt_nature(economicIndicators_data,'Spain', 1970)
+
+```
+The example here shows that the production of nature, agriculture,and hunting of Spain in 1970 was 3904684420.
+
