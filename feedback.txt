@@ -1,0 +1,12 @@
+Hi Ada and Leah,
+
+So far, your package is on the right track. Here are some of the comments I have:
+
+- Leah, your name needs to be added to the description file.
+- There's an strong imbalance of commits between the both of y'all. The workload needs to be balanced between you two.
+- The functions all work as intended and are relatively polished along with the documentation and testing.
+- The vignette has a decent amount of stuff so far. Keep expanding upon it as you work towards the second checkpoint.
+- The warning appears to come from missing imports, as seen in the last lines of the R CMD check. Follow the suggestions there to fix the warning.
+- As far as the notes go, because of your use of ggplot2, this will naturally trigger warnings. The workarounds involve changing settings to avoid the appearance of notes, as seen in this StackOverflow forum: https://stackoverflow.com/questions/9439256/how-can-i-handle-r-cmd-check-no-visible-binding-for-global-variable-notes-when
+
+For the next checkpoint, remedy the notes I mentioned above and continue expanding the package to incorporate a few more tasks you would like you package to accomplish.
