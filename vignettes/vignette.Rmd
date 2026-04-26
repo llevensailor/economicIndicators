@@ -19,8 +19,6 @@ library(economicIndicators)
 ```
 
 
-# Quick Reference Guide 
-
 You must use the specific data frame given in the package to make these functions work. Other data frames will not be able to use the functions because of how to functions were created.
 
 ### Finding Specific Data 
