@@ -17,3 +17,31 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(economicIndicators)
 ```
+
+# Quick Reference Guide 
+
+You must use the specific data frame given in the package to make these functions work. Other data frames will not be able to use the functions because of how to functions were created.
+
+### Finding Specific Data 
+
+```{r}
+# Use the highest_gdp and lowest_gdp to find those spefic data points 
+highest_gdp_per_year(economicIndicators_data, 2010)
+
+lowest_gdp_per_year(economicIndicators_data, 2010)
+
+mean_gdp_per_year(economicIndicators_data, 2000)
+```
+
+You can use these functions individually or you can add a functional to use them across every year.
+
+## Common Uses
+
+```{r}
+# Outputs a list of every higheset gdp per year for every year 
+list <- lapply(unique(economicIndicators_data$Year), function(x) {
+    highest_gdp_per_year(economicIndicators_data, x)
+})
+```
+
+### 
