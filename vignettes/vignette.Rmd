@@ -19,38 +19,17 @@ library(economicIndicators)
 ```
 
 
-You must use the specific data frame given in the package to make these functions work. Other data frames will not be able to use the functions because of how to functions were created.
-
-### Finding Specific Data 
-
-```{r}
-# Use the highest_gdp and lowest_gdp to find those spefic data points 
-highest_gdp_per_year(economicIndicators_data, 2010)
-
-lowest_gdp_per_year(economicIndicators_data, 2010)
-
-mean_gdp_per_year(economicIndicators_data, 2000)
-```
-
-You can use these functions individually or you can add a functional to use them across every year.
-
-## Common Uses
-
-```{r}
-# Outputs a list of every higheset gdp per year for every year 
-list <- lapply(unique(economicIndicators_data$Year), function(x) {
-    highest_gdp_per_year(economicIndicators_data, x)
-})
-```
-
-
 ## Background
 
-This package provides an analysis of crucial indicators such as population, the AMA exchange rate, and GDP per population of a country within the years 1970-2021 with the economicIndiators_data dataset from Kaggle
+This package provides an analysis of crucial indicators such as population, the AMA exchange rate, and GDP per population of a country within the years 1970-2021 with the economicIndiators_data dataset from Kaggle. You must use the specific data frame given in the package to make these functions work. Other data frames will not be able to use the functions because of how to functions were created.
 
 What you can do with the package:
 
 -   Find the Highest GDP in a given Year
+
+-   Find the Lowest GDP in a given Year
+
+-   Find the Mean GDP in a given Year
 
 -   Learn a country's AMA Exchange Rate
 
@@ -73,6 +52,31 @@ highest_gdp_per_year(economicIndicators_data, 1970)
 ```
 
 The example shows that the United States had the highest Gross Domestic Product (GDP) in 1970 of about 1.07e+12.
+
+## Lowest GDP Per Year
+
+It provides the lowest gdp value based on the given year.
+
+Example:
+
+```{r}
+lowest_gdp_per_year(economicIndicators_data, 1970)
+```
+
+The example shows that Tuvalu had the lowest Gross Domestic Product (GDP) in 1970 of about 2585174.
+
+## Mean GDP Per Year
+
+It provides the mean gdp value based on the given year.
+
+Example:
+
+```{r}
+mean_gdp_per_year(economicIndicators_data, 1970)
+```
+
+The example shows that the mean Gross Domestic Product (GDP) in 1970 of about 18243661311.
+
 
 ## AMA Exchange Rate
 
@@ -130,4 +134,14 @@ ag_hunt_nature(economicIndicators_data,'Spain', 1970)
 ```
 
 The example here shows that the production of nature, agriculture,and hunting of Spain in 1970 was 3904684420.
+
+
+## Common Uses
+
+```{r}
+# Outputs a list of every higheset gdp per year for every year 
+list <- lapply(unique(economicIndicators_data$Year), function(x) {
+    highest_gdp_per_year(economicIndicators_data, x)
+})
+```
 
