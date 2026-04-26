@@ -12,7 +12,6 @@
 #'@importFrom rlang .data
 #'@export
 #'@examples country_GDP_per_pop_timed(economicIndicators_data,'Spain')
-library(fpp3)
 country_GDP_per_pop_timed <- function(data,country){
   if(!is.character(country)){
     stop("Please put in a character type.")
