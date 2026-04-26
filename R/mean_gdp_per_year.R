@@ -11,11 +11,14 @@
 #'@keywords internal
 library(dplyr)
 mean_gdp_per_year<- function(data,year) {
+  if(year<1970 || year>2021){
+    stop("Please type in a year that is within the range of 1970 and 2021")
+  }
   data <- data |>
     dplyr::filter(Year == year) |>
     dplyr::select(`Gross Domestic Product (GDP)`) |>
-    dplyr::summarise(meanGDP = mean(`Gross Domestic Product (GDP)`))
-  print(data)
+    dplyr::mutate(meanGDP = mean(`Gross Domestic Product (GDP)`))
+  return(data$meanGDP[1])
 }
 
 

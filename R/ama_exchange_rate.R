@@ -9,6 +9,8 @@
 #'@param year the specific year for the country
 #'@importFrom dplyr filter select
 #'@importFrom rlang .data
+#'@importFrom stats lm ts
+#'@importFrom utils head
 #'@export
 #'@examples ama_exchange_rate(economicIndicators_data,'Spain', 1970)
 library(dplyr)
