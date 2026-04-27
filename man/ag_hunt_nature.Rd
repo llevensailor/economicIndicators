@@ -23,3 +23,4 @@ in that country in a certain year.
 \examples{
 ag_hunt_nature(economicIndicators_data,'Spain', 1970)
 }
+\keyword{internal}

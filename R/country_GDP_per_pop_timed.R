@@ -10,6 +10,7 @@
 #'@import fpp3
 #'@importFrom dplyr filter select mutate
 #'@importFrom rlang .data
+#'@keywords internal
 #'@export
 #'@examples country_GDP_per_pop_timed(economicIndicators_data,'Spain')
 country_GDP_per_pop_timed <- function(data,country){

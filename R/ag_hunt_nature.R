@@ -9,6 +9,7 @@
 #'@param year the year set for the country
 #'@importFrom dplyr filter select
 #'@importFrom rlang .data
+#'@keywords internal
 #'@export
 #'@examples ag_hunt_nature(economicIndicators_data,'Spain', 1970)
 

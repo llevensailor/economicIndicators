@@ -20,3 +20,4 @@ the GDP per population in a country.
 \examples{
 gdp_per_pop1yr(economicIndicators_data,'Spain', 1970)
 }
+\keyword{internal}

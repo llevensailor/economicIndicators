@@ -22,3 +22,4 @@ about the GDP per population association with each year.
 \examples{
 country_GDP_per_pop_timed(economicIndicators_data,'Spain')
 }
+\keyword{internal}

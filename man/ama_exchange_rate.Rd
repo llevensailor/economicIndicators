@@ -20,3 +20,4 @@ the GDP per population in a country.
 \examples{
 ama_exchange_rate(economicIndicators_data,'Spain', 1970)
 }
+\keyword{internal}

@@ -25,3 +25,4 @@ the population in both countries.
 \examples{
 pop_country_compare_1year(economicIndicators_data,'Spain', 'Italy', 1970)
 }
+\keyword{internal}

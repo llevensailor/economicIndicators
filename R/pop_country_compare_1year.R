@@ -11,6 +11,7 @@
 #'@importFrom dplyr filter select mutate
 #'@importFrom rlang .data
 #'@import ggplot2 dplyr
+#'@keywords internal
 #'@export
 #'@examples pop_country_compare_1year(economicIndicators_data,'Spain', 'Italy', 1970)
 pop_country_compare_1year <- function(data,country1,country2,year){

@@ -11,6 +11,7 @@
 #'@importFrom rlang .data
 #'@importFrom stats lm ts
 #'@importFrom utils head
+#'@keywords internal
 #'@export
 #'@examples ama_exchange_rate(economicIndicators_data,'Spain', 1970)
 library(dplyr)
