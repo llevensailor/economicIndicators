@@ -21,11 +21,13 @@ country_GDP_per_pop_timed <- function(data,country){
     dplyr::filter(Country == country) |>
     dplyr::select(Country, Year, Population, `Gross Domestic Product (GDP)`) |>
     dplyr::mutate(GDP_per_pop = `Gross Domestic Product (GDP)`/Population,Year_dif = Year-1970)
+  model <- lm(GDP_per_pop~Year, data = data)
 
   df <- ts(data$GDP_per_pop, frequency = 1, start = 1970)
   plot(df, main = paste(country, "'s GDP per Population over Time"),ylab = "GDP Per Population")
 
-  return(lm(GDP_per_pop~Year_dif, data = data))
-  summary(lm(GDP_per_pop~Year_dif, data = data))
+  abline(model, col = "red", lwd = 2)
+
+  return(model)
 }
 

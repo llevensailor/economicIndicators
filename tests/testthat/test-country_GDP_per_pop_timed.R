@@ -8,7 +8,7 @@ test_that("Country GDP per population timed works", {
     dplyr::filter(Country == country) |>
     select(Country, Year, Population, `Gross Domestic Product (GDP)`) |>
     mutate(GDP_per_pop = `Gross Domestic Product (GDP)`/Population,Year_dif = Year-1970)
-  expected_lm <- lm(GDP_per_pop~Year_dif, data = economicIndicators_data)
-  expect_equal(result$coefficients,expected_lm$coefficients)
-
+  expected_lm <- lm(GDP_per_pop~Year, data = economicIndicators_data)
+  expect_equal(coef(result),coef(expected_lm)
+)
 })
