@@ -1,0 +1,5 @@
+-	Nice job with the vignette! For the common use area – you could potentially expand this to be another function in your package, referencing the highest_gdp_per_year function.
+-	You can remove the .csv file from the data folder since this is not needed any longer.
+-	To fix the “no visible binding” notes, you can add utils::globalVariables(c("put variable inside")) to the top of each R file that has this problem. Within the vector, you will add the variables (in character format) that are leading to the notes.
+-	Functions look great! You can perhaps focus on small details that may communicate more information. For example, you may want to add the line of best-fit to the plot in country_GDP_per_pop_timed(). Consider any other functions that may be useful for someone exploring your package, potentially ones that are more generalized to the whole dataset.
+-	Good job with the package! Most of what remains will be to add details to various aspects of your package.
