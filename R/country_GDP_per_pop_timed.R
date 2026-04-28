@@ -9,6 +9,7 @@
 #'@param country the country for the specific GDP per population
 #'@import fpp3
 #'@importFrom dplyr filter select mutate
+#'@importFrom graphics abline
 #'@importFrom rlang .data
 #'@keywords internal
 #'@export
