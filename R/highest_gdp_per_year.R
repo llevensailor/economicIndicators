@@ -7,10 +7,13 @@
 #'@param year the year set for the country
 #'@importFrom dplyr filter select mutate
 #'@importFrom rlang .data
+#'@importFrom utils globalVariables
 #'@export
 #'@examples highest_gdp_per_year(economicIndicators_data, 1970)
 #'@keywords internal
 library(dplyr)
+library(utils)
+utils::globalVariables(c("Year", "Gross Domestic Product (GDP)", "Country"))
 highest_gdp_per_year<- function(data,year) {
   if(year<1970 || year>2021){
     stop("Please type in a year that is within the range of 1970 and 2021")

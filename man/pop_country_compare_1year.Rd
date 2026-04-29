@@ -3,9 +3,6 @@
 \name{pop_country_compare_1year}
 \alias{pop_country_compare_1year}
 \title{Population country Comparison in one year}
-\usage{
-pop_country_compare_1year(data, country1, country2, year)
-}
 \arguments{
 \item{data}{the economicIndicators data set}
 

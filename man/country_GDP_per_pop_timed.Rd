@@ -3,9 +3,6 @@
 \name{country_GDP_per_pop_timed}
 \alias{country_GDP_per_pop_timed}
 \title{Country GDP per population over Time}
-\usage{
-country_GDP_per_pop_timed(data, country)
-}
 \arguments{
 \item{data}{economicIndicators dataset}
 

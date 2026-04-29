@@ -3,9 +3,6 @@
 \name{ag_hunt_nature}
 \alias{ag_hunt_nature}
 \title{Agricultural, hunting, forestry, fishing indicator}
-\usage{
-ag_hunt_nature(data, country, year)
-}
 \arguments{
 \item{data}{the economicIndicators data set}
 

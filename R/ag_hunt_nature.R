@@ -9,10 +9,12 @@
 #'@param year the year set for the country
 #'@importFrom dplyr filter select
 #'@importFrom rlang .data
+#'@importFrom utils globalVariables
 #'@keywords internal
 #'@export
 #'@examples ag_hunt_nature(economicIndicators_data,'Spain', 1970)
-
+library(utils)
+utils::globalVariables(c("Year", "Agriculture, hunting, forestry, fishing (ISIC A-B)", "Country"))
 ag_hunt_nature<- function(data,country,year) {
   if(!is.character(country)){
     stop("Please put in a character type.")

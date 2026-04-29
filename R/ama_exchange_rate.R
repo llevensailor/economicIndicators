@@ -10,11 +10,13 @@
 #'@importFrom dplyr filter select
 #'@importFrom rlang .data
 #'@importFrom stats lm ts
-#'@importFrom utils head
+#'@importFrom utils head globalVariables
 #'@keywords internal
 #'@export
 #'@examples ama_exchange_rate(economicIndicators_data,'Spain', 1970)
 library(dplyr)
+library(utils)
+utils::globalVariables(c("Year", "AMA exchange rate", "Country"))
 ama_exchange_rate <- function(data,country,year){
   if(!is.character(country)){
     stop("Please put in a character type.")

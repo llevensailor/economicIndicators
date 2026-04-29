@@ -11,9 +11,12 @@
 #'@importFrom dplyr filter select mutate
 #'@importFrom graphics abline
 #'@importFrom rlang .data
+#'@importFrom utils globalVariables
 #'@keywords internal
 #'@export
 #'@examples country_GDP_per_pop_timed(economicIndicators_data,'Spain')
+library(utils)
+utils::globalVariables(c("Year", "Gross Domestic Product (GDP)", "Country"))
 country_GDP_per_pop_timed <- function(data,country){
   if(!is.character(country)){
     stop("Please put in a character type.")

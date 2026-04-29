@@ -9,10 +9,13 @@
 #'@param year the specific year for the country
 #'@importFrom dplyr filter select mutate
 #'@importFrom rlang .data
+#'@importFrom utils globalVariables
 #'@keywords internal
 #'@export
 #'@examples gdp_per_pop1yr(economicIndicators_data,'Spain', 1970)
 library(dplyr)
+library(utils)
+utils::globalVariables(c("Year", "Gross Domestic Product (GDP)", "Country", "Population"))
 gdp_per_pop1yr <- function(data,country,year){
   if(!is.character(country)){
     stop("Please put in a character type.")

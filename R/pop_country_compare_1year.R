@@ -9,11 +9,13 @@
 #'@param country2 the second country for comparison
 #'@param year the year set for comparison of the countries
 #'@importFrom dplyr filter select mutate
+#'@importFrom utils globalVariables
 #'@importFrom rlang .data
 #'@import ggplot2 dplyr
 #'@keywords internal
 #'@export
 #'@examples pop_country_compare_1year(economicIndicators_data,'Spain', 'Italy', 1970)
+utils::globalVariables(c("Year", "Country", "Population"))
 pop_country_compare_1year <- function(data,country1,country2,year){
   if(year<1970 || year>2021){
     stop("Please type in a year that is within the range of 1970 and 2021")
