@@ -23,6 +23,9 @@ pop_country_compare_1year <- function(data,country1,country2,year){
   if(!is.character(country1) || !is.character(country2)){
     stop("Please put in a character type.")
   }
+  if(!country1 %in% unique(data$Country) || !country2 %in% unique(data$Country)){
+    warning("This country may not exist in the data.")
+  }
   country1 <- stringr::str_to_title(country1)
   country2 <- stringr::str_to_title(country2)
 

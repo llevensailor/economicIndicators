@@ -24,6 +24,9 @@ ama_exchange_rate <- function(data,country,year){
   if(year<1970 || year>2021){
     stop("Please type in a year that is within the range of 1970 and 2021")
   }
+  if(!country %in% unique(data$Country) ){
+    warning("This country may not exist in the data.")
+  }
   country <- stringr::str_to_title(country)
   data <- data |>
     dplyr::filter(Country == country, Year == year) |>

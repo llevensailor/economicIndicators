@@ -21,6 +21,13 @@ country_GDP_per_pop_timed <- function(data,country){
   if(!is.character(country)){
     stop("Please put in a character type.")
   }
+  if(!country %in% unique(data$Country) ){
+    warning("This country may not exist in the data.")
+  }
+  if(!country %in% unique(data$Country) ){
+    warning("This country may not exist in the data.")
+  }
+
   country <- stringr::str_to_title(country)
 
   data <- data |>
