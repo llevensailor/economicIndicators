@@ -22,7 +22,8 @@ Imports:
   dplyr,
   fpp3,
   rlang,
-  ggplot2
+  ggplot2,
+  stringr
 Suggests: 
     knitr,
     rmarkdown,

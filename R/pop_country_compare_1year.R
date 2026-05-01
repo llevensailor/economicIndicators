@@ -11,7 +11,7 @@
 #'@importFrom dplyr filter select mutate
 #'@importFrom utils globalVariables
 #'@importFrom rlang .data
-#'@import ggplot2 dplyr
+#'@import ggplot2 dplyr stringr
 #'@keywords internal
 #'@export
 #'@examples pop_country_compare_1year(economicIndicators_data,'Spain', 'Italy', 1970)
@@ -23,6 +23,9 @@ pop_country_compare_1year <- function(data,country1,country2,year){
   if(!is.character(country1) || !is.character(country2)){
     stop("Please put in a character type.")
   }
+  country1 <- stringr::str_to_title(country1)
+  country2 <- stringr::str_to_title(country2)
+
   data2 <- data
   data <- data |>
     dplyr::filter(Country == country1, Year == year) |>
